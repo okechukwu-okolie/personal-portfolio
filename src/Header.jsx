@@ -2,36 +2,26 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { MdOutlineLightMode } from "react-icons/md";
-const body = document.getElementsByTagName(body)
+
 
 
 const Header = () => {
-  const [light,setLight]=useState(false);
 
-function changeLight(){
-  setLight(!light)
-  if (light){
-    return(body.style.backgroundColor = 'white', body.style.color = 'black')
-  }else{
-    alert('hello')
-  }
-}
 
 
 
   return (
     <Container>
-      <span><span className='sam'>S.</span><span className='okolie'>O</span></span>
-        <ul>
-           <NavLink to ={'/'}><li>Home</li></NavLink>
-           <NavLink to={'/about'}><li>About</li></NavLink>
-           <NavLink to={'/portfolio'}><li>Portfolio</li></NavLink>
-           <NavLink to={'/client'}> <li>Client</li></NavLink>
-        </ul>
+      <div className='logo'>
+           <span><span className='sam'>S.</span><span className='okolie'>O</span></span>
+      </div>
+      
+       <div className='contactLight'>
+          <NavLink to={'/contact'}><button>Contact Me</button></NavLink>
+          <span className='light'><MdOutlineLightMode   /></span>
+       </div>
 
-        <NavLink to={'/contact'}><button>Contact Me</button></NavLink>
-
-        <span className='light'><MdOutlineLightMode  onClick={changeLight} /></span>
+       
 
     </Container>
   )
@@ -39,8 +29,6 @@ function changeLight(){
 
 export default Header
 const Container = styled.div`
-    /* border-bottom: 1px solid yellowgreen; */
-    /* box-shadow: 1px 1px 7px yellowgreen; */
     display: flex;
     justify-content: space-between;
     height: 60px;
@@ -65,15 +53,6 @@ const Container = styled.div`
 
     
 
-    ul{
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      
-      
-      
-
-    }
 
 
 a:hover{

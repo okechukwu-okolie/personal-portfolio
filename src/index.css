@@ -1,8 +1,9 @@
-*{
+ *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Montserrat;
+  color: white;
 }
 
 body{
@@ -10,4 +11,10 @@ body{
   color: white;
   overflow: hidden;
   overflow-y:scroll ;
+} 
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  display: none;
 }

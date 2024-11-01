@@ -6,7 +6,7 @@ const About = () => {
     <Container>
 
     <div className='imgDiv'>
-      <img src="/public/IMG-20190804-WA0009-removebg-preview.png" alt="" />
+      <img src="/1730466831234.png" alt="" />
     </div>
     <div className='textDiv'>
       <h2>
@@ -15,14 +15,14 @@ const About = () => {
       <h3>
         I am a passionate <span>FULL STACK DEVELOPER</span> also with formal training  
         in Electrical Electronics Engineering.
-        <br /><br />
+        <br />
         I am passionate about developing software based solutions tailored to address clients and users pain-points and 
         maximise users interaction.
-        <br /><br />
+        <br />
         I am objective centered, goal driven and a lover of good music and food.
       </h3>
-      <br /><br /><br />
-      <a href="#">More about Me</a>
+      <br />
+      <a href="/">More about Me</a>
     </div>
     
     </Container>
@@ -54,10 +54,11 @@ const Container = styled.div`
     h2{
       font-size: 50px;
       color: yellowgreen;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 1px white;
     }
     h3{
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 200;
     }
   }
@@ -65,10 +66,10 @@ const Container = styled.div`
   .imgDiv{
     
     img{
-      width: 350px;
-      margin-top:-80px;
+      width: 300px;
+      margin-top:60px;
+      object-fit: cover;
       border-bottom-left-radius: 30%;
-      /* box-shadow: ; */
       opacity: .7;
     }
 

@@ -1,23 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+import Socials from '../component/Socials'
 
 const Home = () => {
   return (
     <Container id='home'>
       
-      <div className='textDiv'>
-      <h6>
-        Hey, I'm <span>SAMUEL OKOLIE</span>
-      </h6>
-      <h5>
-        A Software Developer
-      </h5>
+          <div className='textDiv'>
+            <h6>
+              Hey, I'm <span>SAMUEL OKOLIE</span>
+            </h6>
+          <h5>
+            A Software Developer
+          </h5>
+          <Socials/>
 
-      </div>
-      <div className='imgDiv'>
-      <img src="/IMG-2-removebg-preview.png" alt="" />
-      </div>
-      
+          </div>
+          <div className='imgDiv'>
+            <img src="/1730466831234.png" alt="" />
+          </div>
+          
       </Container>
   )
 }
@@ -28,7 +30,7 @@ const Container = styled.div`
 position:relative;
 width: 80%;
 margin: auto;
-height: calc(100vh - 60px);
+height: 100vh;
 
     .textDiv{
       float: right;
@@ -51,16 +53,11 @@ height: calc(100vh - 60px);
 
   
     .imgDiv{
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 1px solid yellow;
+      position: absolute;
+      left: 50%;
 
       img{
-        width: 150px;
-        border-radius: 50%;
-        border: 1px solid yellow;
-        object-fit: cover;
+      
       }
     }
   img{

@@ -3,9 +3,10 @@ import './App.css'
 import Header from './Header'
 import Home from './pages/Home'
 import About from './pages/About'
-import Client from './pages/Client'
-import Portfolio from './pages/Portfolio'
-import Contact from './pages/Contact'
+ import Client from './pages/Client'
+ import Portfolio from './pages/Portfolio'
+ import Contact from './pages/Contact'
+import Nav from './component/Nav'
 
 
 function App() {
@@ -13,14 +14,16 @@ function App() {
 
   return (
     <>
+    
     <Header />
-      <Routes> 
+    <Nav/>
+       <Routes> 
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/client' element={<Client/>}/>
           <Route path='/portfolio' element={<Portfolio/>}/>
           <Route path='/contact' element={<Contact/>}/>
-      </Routes>
+      </Routes> 
     </>
   )
 }
