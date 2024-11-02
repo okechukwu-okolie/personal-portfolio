@@ -60,14 +60,17 @@ height: 100vh;
 
   .textDiv{
     text-align: center;
+    
   }
 
   .textDiv h3{
     text-shadow: 1px 1px 3px black;
     
+    
   }
   .textDiv h5{
     text-shadow: 1px 1px 3px black;
+    background-color: #80808076;
   }
   .textDiv h6{
     text-shadow: 1px 1px 3px black;

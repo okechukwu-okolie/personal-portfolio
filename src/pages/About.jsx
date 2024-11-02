@@ -75,12 +75,15 @@ padding-top: 30px;
      position: absolute;
      top: 35%;
      width: 90%;
+     background-color: #8080805d;
+     
 
      h2{
       font-size: 20px;
      }
      h3{
-      font-size: 11px;
+      font-size: 12px;
+      font-weight: 500;
      }
      span{
       font-size: 12px;
