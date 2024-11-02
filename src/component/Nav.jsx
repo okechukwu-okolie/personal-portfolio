@@ -1,18 +1,36 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import {Link} from 'react-scroll'
 import { FaHome } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
 import { BiSolidBookHeart } from "react-icons/bi";
+import { useState } from 'react';
 
 const Nav = ()=>{
 
+
+    const [showMenu, setShowMenu] = useState(false);
+    const closeMenu = () => {
+        setShowMenu(true);
+    }
+  
     return(
-        <Container>
-                 <ul>
-                    <NavLink to ={'/'}><li id='home'>Home <FaHome /></li></NavLink>
-                    <NavLink to={'/about'}><li>About <FcAbout /></li></NavLink>
-                    <NavLink to={'/portfolio'}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
-                    <NavLink to={'/client'}> <li>Client</li></NavLink>
+        <Container  >
+                 <ul className='navComponent'>
+                    <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'>Home <FaHome /></li></NavLink>
+                    <NavLink to={'/about'} spy={true} smooth={true} offset={50} duration={500}><li>About <FcAbout /></li></NavLink>
+                    <NavLink to={'/portfolio'} spy={true} smooth={true} offset={50} duration={500}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
+                    {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}> <li>Client</li></NavLink> */}
+                </ul>
+
+                <ul className={showMenu ? 'navComponent2': ''}>
+                    <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'  onClick={closeMenu}>Home <FaHome /></li></NavLink>
+
+                    <NavLink to={'/about'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}><li>About <FcAbout /></li></NavLink>
+
+                    <NavLink to={'/portfolio'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
+
+                    {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}> <li>Client</li></NavLink> */}
                 </ul>
         </Container>
     )
@@ -20,7 +38,48 @@ const Nav = ()=>{
 
 export default Nav
 const Container = styled.div`
-z-index: 5;
+        z-index: 5;
+
+        .navComponent2{
+            display:flex;
+        }
+
+
+         @media(max-width:768px){
+            .navComponent {
+                display:none;
+                }
+            }  
+
+            @media(max-width:768px){
+            .navComponent2 {
+                display:flex;
+                flex-direction: column;
+                position: fixed;
+                top: 55px;
+                left:75%;
+                height: fit-content;
+                width: 200px;
+                border-radius: 10px;
+                border: 1px solid yellowgreen;
+                z-index: 2;
+                }
+                li{
+                    padding:0px;
+                    font-size: 12px;
+                }
+                a:hover{
+                    color: yellowgreen;
+                    }
+
+                    a.active{
+                    color: yellow;
+                    font-size: 20px;
+                    transition-duration: .7s;
+                    }
+            } 
+
+
 
 
 
@@ -37,16 +96,16 @@ z-index: 5;
         ul{
             border: 1px solid yellowgreen;
             width: fit-content;
-            /* padding: 20px; */
             border-radius: 40px;
             list-style: none;
             display: flex;
-            /* margin: 30px; */
             list-style: none;
             position:fixed;
-            left: 50%;
-            transform: translateX('50%');
+            left: 35%;
             bottom: 20px;
+
+           
+            
             
             
             
@@ -62,7 +121,7 @@ z-index: 5;
             color: yellow;
             font-size: 12px;
             transition-duration: .5s;
-            }
+        }
                     
             }
     

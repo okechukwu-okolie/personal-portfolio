@@ -6,7 +6,7 @@ const About = () => {
     <Container>
 
     <div className='imgDiv'>
-      <img src="/1730466831234.png" alt="" />
+      <img src="/1730466831258.png" alt="" />
     </div>
     <div className='textDiv'>
       <h2>
@@ -32,18 +32,25 @@ const About = () => {
 export default About
 
 const Container = styled.div`
+padding-top: 30px;
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: calc(100vh-70px);
+  /* height: calc(100vh-70px); */
+
+  @media(max-width:768px){
+    display: block;
+  }
   
 
   .textDiv{
     width: 570px;
     font-family: Monserrat;
     color: #f0eeee;
+
+    
 
     span{
       font-size: 22px;
@@ -61,16 +68,35 @@ const Container = styled.div`
       font-size: 17px;
       font-weight: 200;
     }
+  
+  }
+  @media(max-width:768px){
+    .textDiv{
+     position: absolute;
+     top: 35%;
+     width: 90%;
+
+     h2{
+      font-size: 20px;
+     }
+     h3{
+      font-size: 11px;
+     }
+     span{
+      font-size: 12px;
+     }
+      
+    }
   }
 
   .imgDiv{
     
     img{
-      width: 300px;
-      margin-top:60px;
+      width: 270px;
+      margin-top:10px;
       object-fit: cover;
       border-bottom-left-radius: 30%;
-      opacity: .7;
+      
     }
 
     a{

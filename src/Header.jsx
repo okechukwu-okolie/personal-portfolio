@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import { MdOutlineLightMode } from "react-icons/md";
+// import { MdOutlineLightMode } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Nav from './component/Nav';
+
 
 
 
 const Header = () => {
+
+  const [showNav, setShowNav] = useState(false);
+  const handleToggle = () => {
+    setShowNav(!showNav);
+  }
 
 
 
@@ -18,7 +26,12 @@ const Header = () => {
       
        <div className='contactLight'>
           <NavLink to={'/contact'}><button>Contact Me</button></NavLink>
-          <span className='light'><MdOutlineLightMode   /></span>
+          
+          <span className='hamb' >
+    <GiHamburgerMenu onClick={handleToggle}/>  
+    {/* {showNav && <Nav/>} */}
+          </span>
+
        </div>
 
        
@@ -33,9 +46,21 @@ const Container = styled.div`
     justify-content: space-between;
     height: 60px;
     align-items: center;
-    width:80%;
+    width:100%;
+    padding: 0px 20px;
     margin: auto;
-    margin-top: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    .contactLight{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    
 
     .sam{
       font-family: Pacifico;
@@ -49,11 +74,6 @@ const Container = styled.div`
       text-shadow:1px 1px 10px  yellow;
       padding-top: 120px;
     }
-    
-
-    
-
-
 
 a:hover{
   color: yellowgreen;
@@ -66,12 +86,15 @@ a.active{
 }
 button{
   background-color: greenyellow;
-  font-size: 900;
   padding: 12px 23px;
   color: black;
   font-weight: 800;
-  /* border: white solid 1px; */
   border-radius: 18px;
+
+  @media (max-width:768px){
+    padding: 5px 10px;
+    font-weight: 500;
+  }
   
 }
 button:hover{
@@ -87,5 +110,17 @@ button.active{
  .light{
   font-size: 30px;
   cursor: pointer;
+ }
+ .hamb{
+  font-size: 20px;
+  display:none;
+
+  @media (max-width:768px){
+    display: flex;
+
+    
+  }
+
+
  }
 `

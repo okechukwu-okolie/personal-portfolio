@@ -10,12 +10,7 @@ const PortfolioCard = ()=>{
             <p>Your Project Description</p>
             <a href="your-project-url">Visit Project</a>
 
-            {/* Add your other project details here */}
-
-            {/* Add a button to open your project in a new tab */}
-            <button onClick={()=>window.open('your-project-url', '_blank')}>Open in New Tab</button>
-
-            {/* Add a button to download your project */}
+         
       
 
         </Container>

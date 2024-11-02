@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import PortfolioCard from '../component/PortfolioCard'
+// import PortfolioCard from '../component/PortfolioCard'
+import Slider from '../component/Slider'
 
 const Portfolio = () => {
   return (
     <Container>
+      <Slider/>
+      {/* <PortfolioCard/>
       <PortfolioCard/>
       <PortfolioCard/>
       <PortfolioCard/>
       <PortfolioCard/>
       <PortfolioCard/>
       <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
+      <PortfolioCard/> */}
     </Container>
   )
 }
