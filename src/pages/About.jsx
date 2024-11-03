@@ -36,7 +36,7 @@ padding-top: 30px;
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   /* height: calc(100vh-70px); */
 
@@ -71,10 +71,14 @@ padding-top: 30px;
   
   }
   @media(max-width:768px){
+
+
     .textDiv{
      position: absolute;
      top: 35%;
-     width: 90%;
+     width: fit-content;
+     text-align: justify;
+     margin: 0 auto;
      background-color: #8080805d;
      
 
@@ -82,7 +86,7 @@ padding-top: 30px;
       font-size: 20px;
      }
      h3{
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
      }
      span{
@@ -90,7 +94,11 @@ padding-top: 30px;
      }
       
     }
+    .imgDiv{
+      display: flex;
+      justify-content: center;
   }
+}
 
   .imgDiv{
     

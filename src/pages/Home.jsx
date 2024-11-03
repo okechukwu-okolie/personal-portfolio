@@ -59,14 +59,11 @@ height: 100vh;
   align-items: center;
 
   .textDiv{
-    text-align: center;
-    
+    text-align: center; 
   }
 
   .textDiv h3{
-    text-shadow: 1px 1px 3px black;
-    
-    
+    text-shadow: 1px 1px 3px black; 
   }
   .textDiv h5{
     text-shadow: 1px 1px 3px black;
@@ -74,6 +71,7 @@ height: 100vh;
   }
   .textDiv h6{
     text-shadow: 1px 1px 3px black;
+    
   }
 
   .imgDiv{
@@ -91,26 +89,31 @@ height: 100vh;
      h3{
         font-size: 50px;
         color: yellow;
+        line-height: 1;
       }
       h4{
         font-size: 25px;
         font-weight: 500;
         margin-top: 20px;
+        line-height: 1;
       }
       h6{
         font-size: 30px;
-        padding-top: 100px;
+        padding-top: 70px;
+        line-height: 1;
       }
       h5{
         font-size: 50px;
+        line-height: 1;
       }
 
       .socials{
         display: flex;
-        justify-content:center;
+        justify-content:left;
         gap: 10px;
         width: 100%;
         font-size: 40px;
+        margin-bottom:30px ;
         
       }
 
@@ -118,16 +121,21 @@ height: 100vh;
       h3{
         font-size:35px;
         text-shadow: 3px 3px 3px black;
+        line-height: 1;
       }
       h5{
         font-size:40px;
         text-shadow: 3px 3px 3px black;
+        line-height: 1;
       }
       h4{
         font-size: 20px;
       }
       h6{
         font-size: 20px;
+        padding: 40px 0px 0px 0px;
+        text-align: left;
+    /* color: red; */
       }
       .socials{
         display: flex;
@@ -171,7 +179,7 @@ height: 100vh;
     /* background-color: #80808087; */
     flex-wrap: wrap;
     width:100%;
-    /* gap: 30px; */
+    gap: 8px;
   
 
     img{

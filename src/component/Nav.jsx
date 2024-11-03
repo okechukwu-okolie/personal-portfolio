@@ -16,12 +16,19 @@ const Nav = ()=>{
   
     return(
         <Container  >
-                 <ul className='navComponent'>
+                  <ul className='navComponent'>
                     <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'>Home <FaHome /></li></NavLink>
                     <NavLink to={'/about'} spy={true} smooth={true} offset={50} duration={500}><li>About <FcAbout /></li></NavLink>
                     <NavLink to={'/portfolio'} spy={true} smooth={true} offset={50} duration={500}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
-                    {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}> <li>Client</li></NavLink> */}
-                </ul>
+                     {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}> <li>Client</li></NavLink>  */}
+                </ul> 
+                {/* <Link activeClass='active' to='' spy={true} smooth={true} offset={-100} duration={500}  className='links'>Home</Link>
+
+                <Link activeClass='active' to='' spy={true} smooth={true} offset={-100} duration={500}  className='links'>About</Link>
+
+                <Link activeClass='active' to='' spy={true} smooth={true} offset={-100} duration={500}  className='links'>Portfolio</Link> */}
+
+                
 
                 <ul className={showMenu ? 'navComponent2': ''}>
                     <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'  onClick={closeMenu}>Home <FaHome /></li></NavLink>
@@ -33,8 +40,8 @@ const Nav = ()=>{
                     {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}> <li>Client</li></NavLink> */}
                 </ul>
         </Container>
-    )
-}
+    )}
+
 
 export default Nav
 const Container = styled.div`

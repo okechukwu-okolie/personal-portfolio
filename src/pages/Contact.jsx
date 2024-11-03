@@ -1,23 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import Socials from '../component/Socials'
 
 const Contact = () => {
   return (
     <Container>
 
       <h1>Contact Me</h1>
+      <Socials/>
       <form action="">
         <input type="text" placeholder='Input your name here' />
         <input type="email" placeholder='Input your email here' />
-        <textarea name="" id="" placeholder='Write your message here...'>
+        <textarea name="message" id="" rows='5'  placeholder='Write your message here...'>
           
         </textarea>
         <div>
-        <button>Click to Submit</button>
+        <button type='submit' value='send' className='submitBtn'>Click to Submit</button>
         </div>
         <div className='emailWhatsapp'>
           <img src="/email-removebg-preview.png" alt="" />
           <img src="/whatspp-removebg-preview.png" alt="" />
+          
         </div>
         
       </form>
@@ -30,23 +33,26 @@ export default Contact
 
 const  Container =styled.div`
 
-  width: 59%;
+  width: 75%;
   height:450px;
   margin: auto;
   border: none;
+  margin-top: 60px;
+  /* border: 1px solid red; */
   
   h1{
     text-align: center;
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: -40px;
 
   }
 
 
   form{
-    width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+   
   }
   input{
     width: 100%;
@@ -58,11 +64,9 @@ const  Container =styled.div`
   textarea{
     width: 100%;
     height: 100px;
-    margin-bottom: 20px;
     resize: none;
-    padding: 10px;
-  background-color: #181717;
-  border: none;
+    background-color: #181717;
+    border: none;
   }
   div{
     width: 100%;
@@ -83,6 +87,16 @@ const  Container =styled.div`
     border-radius: 10px;
   }
 
+  .socials{
+        display: flex;
+        justify-content:center;
+        gap: 10px;
+        width: 100%;
+        font-size: 35px;
+        margin-bottom: 5px;
+        
+      }
+
   @media(max-width:768px){
     margin-top: 100px;
     h1{
@@ -102,10 +116,10 @@ const  Container =styled.div`
   }
 
   .emailWhatsapp{
-    
+    margin: 0px;
 
     img{
-      width: 40px;
+      width: 30px;
       margin-right: 10px;
       object-fit: cover;
     }

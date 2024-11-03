@@ -1,20 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 // import PortfolioCard from '../component/PortfolioCard'
-import Slider from '../component/Slider'
+import Testing from '../Testing'
+// import Slider from '../component/Slider'
 
 const Portfolio = () => {
   return (
     <Container>
-      <Slider/>
-      {/* <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/>
-      <PortfolioCard/> */}
+      <Testing/>
     </Container>
   )
 }
@@ -22,11 +15,11 @@ const Portfolio = () => {
 export default Portfolio
 
 const Container = styled.div`
-width: 80%;
+width: 300px;
 margin: 0 auto;
-display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-margin-bottom: 70px;
+/* display: flex; */
+/* justify-content: space-evenly; */
+/* flex-wrap: wrap; */
+/* margin-bottom: 70px; */
   
 `

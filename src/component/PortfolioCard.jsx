@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
-const PortfolioCard = ()=>{
+const PortfolioCard = (props)=>{
 
     return(
         <Container>
             
-            <img src="your-image-url" alt="Portfolio Image"/>
-            <h3>Your Project Title</h3>
-            <p>Your Project Description</p>
-            <a href="your-project-url">Visit Project</a>
+            <img className='cardImg' src={props.cardImg} alt="Portfolio Image"/>
+            <div >
+                <h3>{props.title}</h3>
+                <p>{props.description}</p>
+                <a href={props.git} target='_blank'>GitHub link <img src="/GitHub.png" alt="" /></a> <br />
+                <a href={props.vercel} target='_blank'>Vercel link <img src="/Vercel.png" alt="" /></a>
+            </div>
+            
 
          
       
@@ -19,10 +23,33 @@ const PortfolioCard = ()=>{
 export default PortfolioCard
 
 const Container = styled.div`
-margin-top: 100px;
+    margin-top: 100px;
     border: 1px solid yellowgreen;
-    width: 200px;
-    height: 250px;
-    border-radius: 20px;
-    /* margin-bottom: 20px; */
+    width: 300px;
+    height: 300px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: #757070;
+
+    .cardImg{
+        object-fit: cover;
+        width: 100%;
+        
+    }
+
+    a img{
+        width: 20px;
+        height: 20px;
+    }
+    div{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* @media(max-width:768px){
+        width: 300px;
+        height: 200px;
+        border-radius: 0px;
+        margin-top: 50px;
+    } */
 ` 

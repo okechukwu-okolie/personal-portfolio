@@ -22,6 +22,7 @@ const Header = () => {
     <Container>
       <div className='logo'>
            <span><span className='sam'>S.</span><span className='okolie'>O</span></span>
+           {/* <img src="/public/logo-removebg-preview.png" alt="" /> */}
       </div>
       
        <div className='contactLight'>
@@ -47,11 +48,19 @@ const Container = styled.div`
     height: 60px;
     align-items: center;
     width:100%;
-    padding: 0px 20px;
+    padding: 0px 150px;
     margin: auto;
     position: fixed;
     top: 0px;
     left: 0px;
+
+    .logo img{
+      margin-top: 15px;
+      width: 100px;
+    }
+    @media (max-width:768px){
+      padding: 0px 15px;
+    }
 
     .contactLight{
       display: flex;

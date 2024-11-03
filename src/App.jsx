@@ -7,6 +7,7 @@ import About from './pages/About'
  import Portfolio from './pages/Portfolio'
  import Contact from './pages/Contact'
 import Nav from './component/Nav'
+// import Testiing from './Testiing'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <>
-    
+    {/* <Testiing/> */}
     <Header />
     <Nav/>
        <Routes> 
