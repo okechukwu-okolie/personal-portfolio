@@ -36,6 +36,18 @@ const Container = styled.div`
         width: 100%;
         
     }
+    h3{
+        color: yellowgreen;
+        margin-bottom: 10px;
+    }
+    p,a{
+        font-size: 15px;
+        padding-bottom: 9px;
+    }
+    p{
+        color: yellow;
+        font-size: 13px;
+    }
 
     a img{
         width: 20px;

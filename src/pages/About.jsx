@@ -32,7 +32,7 @@ const About = () => {
 export default About
 
 const Container = styled.div`
-padding-top: 30px;
+padding-top: 50px;
   width: 80%;
   margin: auto;
   display: flex;
@@ -55,14 +55,14 @@ padding-top: 30px;
     span{
       font-size: 22px;
       margin: 0px 5px;
-      font-weight: 600;
+      font-weight: 800;
       color: yellowgreen;
     }
     h2{
       font-size: 50px;
       color: yellowgreen;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 1px white;
+      margin-bottom: -5px;
+      text-shadow: 1px 1px 2px white;
     }
     h3{
       font-size: 17px;
@@ -76,7 +76,7 @@ padding-top: 30px;
     .textDiv{
      position: absolute;
      top: 35%;
-     width: fit-content;
+     /* width: auto; */
      text-align: justify;
      margin: 0 auto;
      background-color: #8080805d;
@@ -103,8 +103,8 @@ padding-top: 30px;
   .imgDiv{
     
     img{
-      width: 270px;
-      margin-top:10px;
+      width: 250px;
+      margin-top:0px;
       object-fit: cover;
       border-bottom-left-radius: 30%;
       

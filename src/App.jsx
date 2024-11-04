@@ -7,6 +7,7 @@ import About from './pages/About'
  import Portfolio from './pages/Portfolio'
  import Contact from './pages/Contact'
 import Nav from './component/Nav'
+import NavHolder from './NavHolder'
 // import Testiing from './Testiing'
 
 
@@ -15,9 +16,8 @@ function App() {
 
   return (
     <>
-    {/* <Testiing/> */}
+ 
     <Header />
-    <Nav/>
        <Routes> 
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>

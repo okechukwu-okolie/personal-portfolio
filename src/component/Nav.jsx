@@ -6,20 +6,20 @@ import { FcAbout } from "react-icons/fc";
 import { BiSolidBookHeart } from "react-icons/bi";
 import { useState } from 'react';
 
-const Nav = ()=>{
+const Nav = (props)=>{
 
 
     const [showMenu, setShowMenu] = useState(false);
     const closeMenu = () => {
-        setShowMenu(true);
+        setShowMenu(!showMenu);
     }
   
     return(
         <Container  >
-                  <ul className='navComponent'>
-                    <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'>Home <FaHome /></li></NavLink>
-                    <NavLink to={'/about'} spy={true} smooth={true} offset={50} duration={500}><li>About <FcAbout /></li></NavLink>
-                    <NavLink to={'/portfolio'} spy={true} smooth={true} offset={50} duration={500}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
+                  <ul className='navComponent' >
+                    <NavLink to ={'/'} ><li id='home'>Home <FaHome /></li></NavLink>
+                    <NavLink to={'/about'}><li>About <FcAbout /></li></NavLink>
+                    <NavLink to={'/portfolio'} ><li>Portfolio<BiSolidBookHeart /></li></NavLink>
                      {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}> <li>Client</li></NavLink>  */}
                 </ul> 
                 {/* <Link activeClass='active' to='' spy={true} smooth={true} offset={-100} duration={500}  className='links'>Home</Link>
@@ -30,15 +30,7 @@ const Nav = ()=>{
 
                 
 
-                <ul className={showMenu ? 'navComponent2': ''}>
-                    <NavLink to ={'/'} spy={true} smooth={true} offset={50} duration={500}><li id='home'  onClick={closeMenu}>Home <FaHome /></li></NavLink>
-
-                    <NavLink to={'/about'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}><li>About <FcAbout /></li></NavLink>
-
-                    <NavLink to={'/portfolio'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}><li>Portfolio <BiSolidBookHeart /></li></NavLink>
-
-                    {/* <NavLink to={'/client'} spy={true} smooth={true} offset={50} duration={500}  onClick={closeMenu}> <li>Client</li></NavLink> */}
-                </ul>
+                
         </Container>
     )}
 
@@ -46,6 +38,7 @@ const Nav = ()=>{
 export default Nav
 const Container = styled.div`
         z-index: 5;
+        position: relative;;
 
         .navComponent2{
             display:flex;
@@ -63,7 +56,7 @@ const Container = styled.div`
                 display:flex;
                 flex-direction: column;
                 position: fixed;
-                top: 55px;
+                top: 35px;
                 left:75%;
                 height: fit-content;
                 width: 200px;
@@ -111,11 +104,6 @@ const Container = styled.div`
             left: 35%;
             bottom: 20px;
 
-           
-            
-            
-            
-            
             li{
                 margin:10px 15px;
             }

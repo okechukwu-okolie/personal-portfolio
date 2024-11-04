@@ -1,30 +1,54 @@
 import React from 'react'
 import styled from 'styled-components'
 import Socials from '../component/Socials'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+
+
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_07nh3dd', 'template_5b6burg', form.current, {
+        publicKey: 'Oz9HLBt5OeMct4C6U',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <Container>
 
       <h1>Contact Me</h1>
       <Socials/>
-      <form action="">
-        <input type="text" placeholder='Input your name here' />
-        <input type="email" placeholder='Input your email here' />
-        <textarea name="message" id="" rows='5'  placeholder='Write your message here...'>
+      <form id='form' className='emailForm' onSubmit={sendEmail} ref={form}>
+        <input type="text" placeholder='Input your name here'   name='your_name'/>
+        <input type="email" placeholder='Input your email here'    name='your_email'/>
+        <textarea name="message" id=""cols='30' rows='10'  placeholder='Write your message here....' value={message}  />
           
-        </textarea>
+
+       
         <div>
-        <button type='submit' value='send' className='submitBtn'>Click to Submit</button>
+        <button type='submit' className='submitBtn'>Click to Submit</button>
         </div>
         <div className='emailWhatsapp'>
-          <img src="/email-removebg-preview.png" alt="" />
-          <img src="/whatspp-removebg-preview.png" alt="" />
+          {/* <img src="/email-removebg-preview.png" alt="" />
+          <img src="/whatspp-removebg-preview.png" alt="" /> */}
           
         </div>
         
       </form>
-
     </Container>
   )
 }
@@ -33,7 +57,7 @@ export default Contact
 
 const  Container =styled.div`
 
-  width: 75%;
+  width: 55%;
   height:450px;
   margin: auto;
   border: none;
@@ -44,6 +68,7 @@ const  Container =styled.div`
     text-align: center;
     font-size: 50px;
     margin-bottom: -40px;
+    margin-top: -0px;
 
   }
 
@@ -93,7 +118,7 @@ const  Container =styled.div`
         gap: 10px;
         width: 100%;
         font-size: 35px;
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         
       }
 
@@ -123,6 +148,7 @@ const  Container =styled.div`
       margin-right: 10px;
       object-fit: cover;
     }
-  }
   
-`
+    } ;
+     `
+

@@ -14,10 +14,10 @@ const Socials = () => {
     <Container>
 
         <div className='socials'>
-            < MdFacebook />
-            <FaSquareXTwitter />
-            <FaLinkedin />
-            <FaInstagramSquare />
+            <a href="/" target='_blank'>< MdFacebook /></a>
+           <a href="/" target='_blank'><FaSquareXTwitter /></a> 
+            <a href="/" target='_blank' ><FaLinkedin /></a>
+            <a href="/" target='_blank'><FaInstagramSquare /></a>
         </div>
          
     </Container>

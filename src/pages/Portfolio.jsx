@@ -16,7 +16,7 @@ export default Portfolio
 
 const Container = styled.div`
 width: 300px;
-margin: 0 auto;
+margin: 80px auto;
 /* display: flex; */
 /* justify-content: space-evenly; */
 /* flex-wrap: wrap; */
