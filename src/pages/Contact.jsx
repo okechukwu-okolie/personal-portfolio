@@ -15,7 +15,7 @@ const Contact = () => {
 
     emailjs
     .sendForm('service_07nh3dd', 'template_5b6burg', form.current, {
-        publicKey: 'Oz9HLBt5OeMct4C6U',
+        publicKey: 'uC6n7HG0NAqmixrbEBAK7',
       })
       .then(
         () => {
@@ -32,10 +32,10 @@ const Contact = () => {
 
       <h1>Contact Me</h1>
       <Socials/>
-      <form id='form' className='emailForm' onSubmit={sendEmail} ref={form}>
+      <form  className='emailForm' onSubmit={sendEmail} ref={form} >
         <input type="text" placeholder='Input your name here'   name='your_name'/>
         <input type="email" placeholder='Input your email here'    name='your_email'/>
-        <textarea name="message" id=""cols='30' rows='10'  placeholder='Write your message here....' value={message}  />
+        <textarea name="message" id=""cols='30' rows='10'  placeholder='Write your message here....'   />
           
 
        

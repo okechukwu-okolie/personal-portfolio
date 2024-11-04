@@ -76,7 +76,8 @@ padding-top: 50px;
     .textDiv{
      position: absolute;
      top: 35%;
-     /* width: auto; */
+     width: 80%;
+     padding: 10px;
      text-align: justify;
      margin: 0 auto;
      background-color: #8080805d;
